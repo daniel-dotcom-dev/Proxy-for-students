@@ -1,0 +1,32 @@
+
+<!DOCTYPE html5>
+<html>
+<head>
+  <title>ixl.com</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="https://www.ixl.com/ixl-favicon.png" />
+  <link href="//fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
+  <link href="css.css" rel="stylesheet" type="text/css">
+</head>
+<body onload="document.getElementById('url').focus();if(window.location.search.indexOf('error=')>-1){var err=window.location.search.substr(window.location.search.indexOf('error=')+6,window.location.search.indexOf('&',window.location.search.indexOf('error='))==-1?undefined:window.location.search.indexOf('&',window.location.search.indexOf('error=')));document.getElementById('error').innerText=document.getElementById('error').textContent=decodeURIComponent(err);document.getElementById('error').style.display='block';}">
+  <div class="container">
+    <div class="main">
+      <h1>Trustie Proxy</h1>
+      <div id="error"></div>
+      <form action="-" method="get" onsubmit="window.location.href='/~/'+(document.getElementById('url').value.substr(0,4)!='http'?'http://':'')+document.getElementById('url').value;return false;">
+        <p>
+          URL: 
+          <input type="text" id="url" name="url" autofocus="autofocus" />
+          <input type="submit" value="Go" />
+        </p>
+      </form>
+      <h3>About Trustie Proxy</h3>
+      <p>Trustie Proxy is a web proxy, similar to CGIProxy, PHProxy, or Glype, that alows users to evade filters and unblock blocked sites. </p>
+      <p>It's designed to be extremely fast and compatible: It processes the data on-the-fly rather than buffering the entire response, and it only modifies URLs when necessary - relative ones will "just work". </p>
+      <p>Trustie Proxy is written in JavaScript with <a href="http://nodejs.org">node.js</a>, and is based off of <a href="https://github.com/daniel-dotcom-dev/node-proxy">Proxy Works</a>.</p>
+    </div>
+    <div class="footer"><p><a href="https://github.com/daniel-dotcom-dev/node-proxy">Based on Proxy Works</a> by Grifith Aaron 371 code services</a>.</p></div>
+  </div>
+</body>
+</html>
